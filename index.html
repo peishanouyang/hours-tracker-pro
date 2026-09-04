@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"><meta name="theme-color" content="#584738"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Hours Tracker"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon.svg"><title>Hours Tracker</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"><style>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"><meta name="theme-color" content="#F6EFE6"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Hours Tracker"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon.svg"><title>Hours Tracker</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"><style>
 :root{--cream:#f1eada;--sand:#cec1a8;--tobacco:#b59e7d;--mahogany:#584738;--espresso:#382920;--fade:#dccbb4;--line:#f1eada2c;--red:#c87865}*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:18px 14px 92px;background:radial-gradient(circle at 12% 0,#d7bd94,transparent 30%),linear-gradient(135deg,var(--tobacco),var(--sand) 52%,#aaa396);color:var(--cream);font-family:'Abril Fatface',Georgia,serif}.app{max-width:800px;margin:auto}.brand{padding:6px 7px 18px;color:var(--espresso);font-size:22px;letter-spacing:.5px}.page{display:none}.page.on{display:block}.card{background:linear-gradient(145deg,#654f3e,#4d3b30);border:1px solid var(--line);border-radius:19px;padding:16px;margin-bottom:13px;box-shadow:0 10px 25px #38292030}.title-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.title,label{display:block;font-size:12px;letter-spacing:.5px;color:var(--fade)}.title{font-weight:400;text-transform:uppercase}.summary{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:13px}.metric{padding:11px;background:#584738b8;border:1px solid var(--line);border-radius:13px}.metric span{font-size:11px;color:var(--fade)}.metric b{display:block;font-size:20px;margin-top:5px;color:var(--cream)}button,input,textarea,select{font:inherit}button{cursor:pointer}.btn{border:0;border-radius:11px;padding:11px 13px;background:var(--tobacco);color:var(--espresso);font-weight:400}.btn.alt{background:#f1eada18;color:var(--cream)}.btn.danger{background:#a65b4d;color:var(--cream)}.btn.mini{padding:7px 10px;font-size:12px}.field{margin-bottom:11px}label{margin-bottom:6px}input,textarea,select{width:100%;background:#725b47;border:1px solid #f1eada28;border-radius:11px;color:var(--cream);padding:10px;outline:0}input:focus,textarea:focus,select:focus{border-color:var(--tobacco);box-shadow:0 0 0 3px #b59e7d33}textarea{min-height:66px;resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.notice{font-size:12px;line-height:1.6;color:var(--fade);background:#f1eada10;border-radius:10px;padding:10px;margin:10px 0}.quick-head,.quick-row{display:grid;grid-template-columns:1.2fr 1fr 1fr 1.35fr;gap:6px;align-items:center}.quick-head{font-size:10px;color:var(--fade);margin:11px 0 5px}.quick-row{margin:6px 0}.quick-row input{padding:8px;font-size:12px}.month-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.month-nav h2{font-size:20px;margin:0}.icon{width:35px;height:35px;border:0;border-radius:10px;background:#f1eada18;color:var(--cream);font-size:21px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.weekday{text-align:center;color:var(--fade);font-size:10px}.day{min-height:64px;text-align:left;padding:5px;border:1px solid transparent;border-radius:10px;background:#f1eada10;color:var(--cream);overflow:hidden}.day.today{border-color:var(--tobacco)}.day.has{background:#f1eada24}.day b{font-size:11px}.shift{display:block;font-size:9px;margin-top:5px;white-space:nowrap}.task-dot{display:block;font-size:9px;color:var(--fade);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.row{padding:11px 0;border-bottom:1px solid var(--line);line-height:1.5}.row:last-child{border:0}.small{font-size:11px;color:var(--fade)}.empty{text-align:center;color:var(--fade);padding:17px;font-size:12px}.check{width:18px;accent-color:var(--tobacco);vertical-align:middle;margin-right:8px}nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:rgba(241,234,218,.94);backdrop-filter:blur(10px);border-top:.5px solid #5847382e;padding-bottom:env(safe-area-inset-bottom)}nav button{flex:1;border:0;background:transparent;color:#82705a;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 0}nav button.on{color:var(--mahogany)}.nav-icon{width:23px;height:23px}#toast{position:fixed;z-index:9;top:20px;left:50%;transform:translate(-50%,-20px);opacity:0;background:var(--espresso);border:1px solid var(--tobacco);border-radius:99px;padding:10px 15px;font-size:12px;transition:.2s}#toast.show{opacity:1;transform:translate(-50%,0)}
 </style><style>#lock{position:fixed;z-index:20;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;background:#382920ee}.lock-card{width:min(360px,100%);text-align:center;background:linear-gradient(145deg,#654f3e,#4d3b30);border:1px solid var(--line);border-radius:20px;padding:24px}.lock-card h1{font-size:25px;margin:0 0 8px}.lock-card p{font-size:13px;color:var(--fade);line-height:1.5;margin:0 0 16px}.lock-card input{margin-bottom:10px;text-align:center;font-size:20px;letter-spacing:5px}.sync-note{font-size:10px;color:var(--fade);margin-top:12px}</style><style id="iphone14pro-hard-guard">
 /* A single cool accent gives actions and information a clear visual hierarchy. */
@@ -136,6 +136,103 @@ html, body { max-width:100%; overflow-x:hidden; }
   .life-item .btn.mini, .shopping-note .btn.mini { display:inline-flex !important; align-items:center; justify-content:center; width:auto !important; min-width:76px !important; max-width:none !important; min-height:38px !important; padding:8px 11px !important; font-size:13px !important; white-space:nowrap; }
   .checkin-grid { grid-template-columns:1fr !important; gap:12px !important; }
   .bottom-nav { padding-left:max(12px, env(safe-area-inset-left)) !important; padding-right:max(12px, env(safe-area-inset-right)) !important; }
+}
+
+/* iPhone 14 Pro (393 CSS px): every measurement below is deliberately bounded.
+   The earlier, roomier desktop styling made the 2-column metrics and month title
+   compete for horizontal space on the actual phone. */
+@media (max-width:430px) {
+  html, body { width:100% !important; max-width:100% !important; overflow-x:clip !important; }
+  body { padding-left:14px !important; padding-right:14px !important; padding-bottom:calc(118px + env(safe-area-inset-bottom)) !important; }
+  .app { width:100% !important; max-width:100% !important; margin:0 auto !important; padding:0 !important; }
+  .brand { padding:24px 4px 26px !important; font-size:40px !important; line-height:1.04 !important; }
+
+  .summary { grid-template-columns:repeat(2, minmax(0,1fr)) !important; gap:8px !important; margin-bottom:12px !important; }
+  .metric { grid-template-columns:30px minmax(0,1fr) !important; grid-template-rows:auto auto !important; align-content:center !important; column-gap:8px !important; row-gap:0 !important; min-height:62px !important; padding:8px 10px !important; border-radius:17px !important; }
+  .metric .metric-icon { width:30px !important; height:30px !important; }
+  .metric .metric-icon svg { width:18px !important; height:18px !important; }
+  .metric span { min-width:0 !important; overflow:hidden !important; text-overflow:ellipsis !important; white-space:nowrap !important; font-size:12px !important; line-height:1.15 !important; }
+  .metric b, .metric #gross-pay { min-width:0 !important; overflow:hidden !important; text-overflow:clip !important; white-space:nowrap !important; margin:0 !important; font-size:20px !important; line-height:1.08 !important; letter-spacing:-.04em !important; }
+  .metric:nth-child(3) b { color:#17110D !important; }
+  .metric:nth-child(3) .metric-icon { color:#30231B !important; background:#F2E9DD !important; }
+
+  .summary > :first-child, .metric:first-child { border-color:#EFE5D9 !important; }
+  #calendar-page .card { padding:16px !important; border-radius:22px !important; }
+  .month-nav { grid-template-columns:32px minmax(0,1fr) 32px !important; gap:5px !important; margin-bottom:16px !important; }
+  #calendar-page .month-nav .icon { width:32px !important; min-width:32px !important; max-width:32px !important; height:32px !important; min-height:32px !important; padding:0 !important; background:transparent !important; color:#31231A !important; border-color:transparent !important; border-radius:0 !important; font-size:28px !important; font-weight:400 !important; }
+  .month-nav h2 { min-width:0 !important; overflow:hidden !important; text-overflow:clip !important; white-space:nowrap !important; font-size:clamp(24px, 6.75vw, 27px) !important; line-height:1.1 !important; letter-spacing:-.045em !important; font-weight:400 !important; }
+  .weekday { min-width:0 !important; overflow:hidden !important; font-size:11px !important; }
+  .calendar { grid-template-columns:repeat(7, minmax(0,1fr)) !important; gap:4px !important; }
+  .calendar > * { min-width:0 !important; }
+  .calendar .day { position:relative !important; min-width:0 !important; aspect-ratio:1 / 1 !important; height:auto !important; min-height:0 !important; padding:5px 4px !important; border-radius:12px !important; }
+  .calendar .day b { color:#705C4D !important; font-size:11px !important; line-height:1 !important; font-weight:400 !important; letter-spacing:0 !important; }
+  .calendar .day.today b, .calendar .day.selected b { color:#F9F1E7 !important; font-weight:500 !important; }
+  .calendar .shift { max-width:100% !important; overflow:hidden !important; text-overflow:clip !important; white-space:nowrap !important; font-size:9px !important; line-height:1.05 !important; margin-top:3px !important; font-weight:700 !important; }
+  .calendar .shift::after { display:none !important; content:none !important; }
+  .calendar .day.has-task { height:auto !important; min-height:0 !important; overflow:hidden !important; }
+  .calendar .task-dot { display:block !important; max-width:100% !important; overflow:hidden !important; text-overflow:ellipsis !important; white-space:nowrap !important; font-size:7px !important; line-height:1.05 !important; font-weight:400 !important; }
+  .calendar-indicator { position:absolute !important; top:5px !important; right:5px !important; width:5px !important; height:5px !important; border-radius:50% !important; background:#9DBFD4 !important; }
+  #calendar-page > .card:last-child { padding:14px 16px !important; }
+  #day-title { display:none !important; }
+  #day-details .row b { font-size:22px !important; overflow-wrap:anywhere; }
+  .day-plan-row { display:grid !important; grid-template-columns:36px minmax(0,1fr) !important; align-items:center !important; gap:10px !important; min-width:0 !important; padding:0 !important; }
+  .day-plan-icon { display:grid !important; place-items:center !important; width:36px !important; height:36px !important; border-radius:50% !important; background:#F2E9DD !important; color:#30231B !important; }
+  .day-plan-icon svg { width:20px !important; height:20px !important; fill:none !important; stroke:currentColor !important; stroke-width:1.8 !important; stroke-linecap:round !important; stroke-linejoin:round !important; }
+  .day-plan-icon.medication { color:#4C3A2E !important; background:#EEE5D8 !important; }
+  .day-plan-copy { min-width:0 !important; }
+  .day-plan-date { display:block !important; margin:0 0 4px !important; color:#75695F !important; font-size:12px !important; font-weight:400 !important; line-height:1.1 !important; }
+  .day-plan-copy b { display:block !important; margin:0 !important; color:#17110D !important; font-size:20px !important; line-height:1.08 !important; letter-spacing:-.025em !important; white-space:nowrap !important; }
+  .day-plan-copy .day-plan-hours { display:block !important; margin-top:4px !important; color:#75695F !important; font-size:12px !important; font-weight:400 !important; }
+  .day-plan-event { padding:10px 0 0 58px !important; color:#4C3A2E !important; font-size:14px !important; overflow-wrap:anywhere !important; }
+  nav { min-width:0 !important; }
+  nav button { min-width:0 !important; overflow:hidden !important; }
+
+  /* Daily check-in stays a single quiet card until Ruby chooses to open it. */
+  #daily-checkin-card { padding:0 !important; overflow:hidden !important; }
+  #daily-checkin-card .checkin-accordion { margin:0 !important; }
+  #daily-checkin-card .checkin-accordion summary { display:flex !important; align-items:center !important; gap:10px !important; padding:14px 16px !important; background:#FCF7F0 !important; color:#30231B !important; cursor:pointer !important; list-style:none !important; }
+  #daily-checkin-card .checkin-accordion summary::-webkit-details-marker { display:none !important; }
+  #daily-checkin-card .checkin-accordion summary::after { content:'⌄' !important; margin-left:4px !important; color:#75695F !important; font-size:18px !important; font-weight:400 !important; }
+  #daily-checkin-card .checkin-accordion[open] summary { border-bottom:1px solid #E6D9CA !important; }
+  #daily-checkin-card .checkin-accordion[open] summary::after { content:'⌃' !important; }
+  .checkin-summary-copy { display:grid !important; gap:2px !important; min-width:0 !important; }
+  .checkin-summary-copy b { color:#30231B !important; font-size:15px !important; line-height:1.15 !important; font-weight:700 !important; }
+  .checkin-summary-copy small { color:#75695F !important; font-size:12px !important; font-weight:400 !important; }
+  #daily-checkin-card .checkin-status { margin-left:auto !important; flex:0 0 auto !important; padding:4px 7px !important; font-size:11px !important; white-space:nowrap !important; }
+  #daily-checkin-card .checkin-body { padding:14px 16px 16px !important; }
+  #daily-checkin-card .checkin-grid { grid-template-columns:repeat(2, minmax(0,1fr)) !important; gap:10px !important; margin:0 !important; }
+  #daily-checkin-card .checkin-grid .wide { grid-column:1 / -1 !important; }
+  #daily-checkin-card .field { margin:0 !important; }
+  #daily-checkin-card label { margin:0 0 5px !important; color:#4C3A2E !important; font-size:12px !important; letter-spacing:0 !important; line-height:1.2 !important; }
+  #daily-checkin-card input, #daily-checkin-card select { min-height:44px !important; padding:9px 10px !important; font-size:14px !important; line-height:1.2 !important; }
+  #daily-checkin-card .wide input { min-height:44px !important; }
+  #daily-checkin-card .btn { width:100% !important; min-height:44px !important; margin:14px 0 0 !important; padding:10px 12px !important; font-size:15px !important; }
+
+  /* Actual hours: compact paired fields instead of a long vertical form. */
+  #time-page > .card:first-child { padding:16px !important; }
+  #time-page > .card:first-child > .title { margin-bottom:10px !important; }
+  #time-page .two, #time-page .time-compact-extra { display:grid !important; grid-template-columns:repeat(2, minmax(0,1fr)) !important; gap:10px !important; margin:0 0 10px !important; }
+  #time-page .two .field, #time-page .time-compact-extra .field { min-width:0 !important; width:auto !important; margin:0 !important; }
+  #time-page > .card:first-child label { margin:0 0 4px !important; font-size:11px !important; line-height:1.15 !important; letter-spacing:0 !important; }
+  #time-page > .card:first-child input, #time-page > .card:first-child select { min-height:44px !important; padding:9px 10px !important; font-size:14px !important; line-height:1.15 !important; }
+  #time-page > .card:first-child .notice { margin:0 0 10px !important; padding:9px 10px !important; border-radius:12px !important; font-size:12px !important; line-height:1.3 !important; }
+  #time-page > .card:first-child > .btn { display:inline-flex !important; align-items:center !important; justify-content:center !important; width:auto !important; min-width:0 !important; min-height:42px !important; margin:0 !important; padding:10px 14px !important; font-size:14px !important; }
+
+  /* Daily record type switcher: three compact choices on one line. */
+  #tasks-page .type-tabs { display:grid !important; grid-template-columns:repeat(3, minmax(0,1fr)) !important; gap:8px !important; margin:8px 0 12px !important; }
+  #tasks-page .type-tabs button { display:flex !important; align-items:center !important; justify-content:center !important; width:100% !important; min-width:0 !important; height:34px !important; min-height:34px !important; margin:0 !important; padding:6px 5px !important; background:#F2E9DD !important; color:#4C3A2E !important; border:1px solid #E2D4C5 !important; border-radius:12px !important; font-size:11px !important; line-height:1 !important; font-weight:700 !important; white-space:nowrap !important; }
+  #tasks-page .type-tabs button.on { background:#5C483A !important; color:#F9F1E7 !important; border-color:#5C483A !important; }
+
+  /* Compact record and roster setup fields. */
+  #tasks-page > .card:not(#daily-checkin-card) { padding:16px !important; }
+  #tasks-page > .card:not(#daily-checkin-card) .field { margin-bottom:8px !important; }
+  #tasks-page > .card:not(#daily-checkin-card) .field label { margin:0 0 4px !important; font-size:13px !important; line-height:1.2 !important; letter-spacing:0 !important; }
+  #tasks-page > .card:not(#daily-checkin-card) .field input, #tasks-page > .card:not(#daily-checkin-card) .field select { min-height:42px !important; padding:8px 10px !important; font-size:14px !important; line-height:1.2 !important; }
+  #tasks-page #life-save { display:inline-flex !important; align-items:center !important; justify-content:center !important; width:auto !important; min-width:0 !important; min-height:40px !important; margin:2px 0 0 !important; padding:9px 14px !important; font-size:14px !important; }
+  #roster-page > .card:first-child { padding:16px !important; }
+  #roster-page > .card:first-child .field { margin-bottom:8px !important; }
+  #roster-page > .card:first-child label { margin:0 0 4px !important; font-size:13px !important; line-height:1.2 !important; letter-spacing:0 !important; }
+  #roster-page > .card:first-child input { min-height:42px !important; padding:8px 10px !important; font-size:14px !important; line-height:1.2 !important; }
 }
 </style></head><body><div id="lock"><div class="lock-card"><h1>Hours Tracker</h1><p>Enter your personal access code to sync your roster and time logs.</p><input id="unlock-code" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Access code"><button class="btn" onclick="unlock()">Unlock</button><div class="sync-note">This device stays unlocked until you clear browser data.</div></div></div><svg width="0" height="0" style="position:absolute"><defs><filter id="sketch"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.2"/></filter></defs><symbol id="cal-icon" viewBox="0 0 24 24"><g filter="url(#sketch)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4m8-4v4M4 10h16"/></g></symbol><symbol id="clock-icon" viewBox="0 0 24 24"><g filter="url(#sketch)" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></g></symbol><symbol id="coin-icon" viewBox="0 0 24 24"><g filter="url(#sketch)" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v10m2-7c-1-.8-4-.6-4 1 0 2 5 1 5 4 0 1.6-3 1.9-4 1"/></g></symbol><symbol id="chart-icon" viewBox="0 0 24 24"><g filter="url(#sketch)" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20h16M6 20v-6m6 6V8m6 12v-9"/></g></symbol></svg><main class="app"><div class="brand">Ruby Ouyang</div><div id="toast"></div>
 <section id="calendar-page" class="page on"><div class="summary"><div class="metric"><span>Scheduled hours</span><b id="planned-hours">0h</b></div><div class="metric"><span>Actual hours</span><b id="actual-hours">0h</b></div><div class="metric"><span>Hours difference</span><b id="difference-hours">0h</b></div><div class="metric"><span>Weekly gross</span><b id="gross-pay">NZ$0.00</b></div></div><div class="card"><div class="month-nav"><button class="icon" onclick="changeMonth(-1)">‹</button><h2 id="month-label"></h2><button class="icon" onclick="changeMonth(1)">›</button></div><div id="calendar" class="calendar"></div></div><div class="card"><div class="title" id="day-title">Daily plan</div><div id="day-details"></div></div></section>
@@ -322,7 +419,7 @@ setLifeType('gym');renderCalendar();
     if (!page || document.querySelector('#daily-checkin-card')) return;
     S.checkins ||= [];
     const date = localDate(), item = current(date), done = Boolean(item.completedAt);
-    page.insertAdjacentHTML('afterbegin', `<section class="card" id="daily-checkin-card"><div class="title-row"><span class="title">Daily check-in · ${date}</span><span class="checkin-status ${done ? 'done' : ''}">${done ? 'Completed' : 'Required today'}</span></div><div class="notice">A short daily reset: mood, sleep, habits, and one honest sentence.</div><div class="checkin-grid"><div class="field"><label>Mood</label><select id="checkin-mood" required><option value="">Choose</option>${['Calm','Happy','Tired','Anxious','Low'].map(x=>`<option ${item.mood===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label>Sleep</label><input id="checkin-sleep" type="number" min="0" max="16" step="0.5" required placeholder="Hours" value="${escapeValue(item.sleepHours)}"></div><div class="field"><label>Sleep quality</label><select id="checkin-quality" required><option value="">Choose 1–5</option>${[1,2,3,4,5].map(x=>`<option value="${x}" ${String(item.sleepQuality)===String(x)?'selected':''}>${x} / 5</option>`).join('')}</select></div><div class="field"><label>Supplements</label><select id="checkin-supplements" required><option value="">Choose</option><option value="taken" ${item.supplements==='taken'?'selected':''}>Taken</option><option value="skipped" ${item.supplements==='skipped'?'selected':''}>Skipped</option></select></div><div class="field"><label>Stretching (min)</label><input id="checkin-stretch" type="number" min="0" step="1" required value="${escapeValue(item.stretchMinutes ?? '')}"></div><div class="field"><label>Vocabulary (words)</label><input id="checkin-vocab" type="number" min="0" step="1" required value="${escapeValue(item.vocabularyWords ?? '')}"></div><div class="field"><label>Reading (min)</label><input id="checkin-reading" type="number" min="0" step="1" required value="${escapeValue(item.readingMinutes ?? '')}"></div><div class="field"><label>Coffee (shots)</label><input id="checkin-coffee" type="number" min="0" step="1" required value="${escapeValue(item.coffeeShots ?? '')}"></div><div class="field wide"><label>Today, one thing I really do not want to do</label><input id="checkin-avoid" required placeholder="Write it honestly" value="${escapeValue(item.avoidTask)}"></div><div class="field wide"><label>One thing I am grateful for today</label><input id="checkin-gratitude" required placeholder="Name one thing" value="${escapeValue(item.gratitude)}"></div></div><button class="btn" type="button" onclick="saveDailyCheckin()">Save daily check-in</button></section>`);
+    page.insertAdjacentHTML('afterbegin', `<section class="card" id="daily-checkin-card"><details class="checkin-accordion"><summary><span class="checkin-summary-copy"><b>Daily check-in</b><small>${date} · mood, sleep & habits</small></span><span class="checkin-status ${done ? 'done' : ''}">${done ? 'Completed' : 'Required'}</span></summary><div class="checkin-body"><div class="checkin-grid"><div class="field"><label>Mood</label><select id="checkin-mood" required><option value="">Choose</option>${['Calm','Happy','Tired','Anxious','Low'].map(x=>`<option ${item.mood===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label>Sleep</label><input id="checkin-sleep" type="number" min="0" max="16" step="0.5" required placeholder="Hours" value="${escapeValue(item.sleepHours)}"></div><div class="field"><label>Sleep quality</label><select id="checkin-quality" required><option value="">Choose 1–5</option>${[1,2,3,4,5].map(x=>`<option value="${x}" ${String(item.sleepQuality)===String(x)?'selected':''}>${x} / 5</option>`).join('')}</select></div><div class="field"><label>Supplements</label><select id="checkin-supplements" required><option value="">Choose</option><option value="taken" ${item.supplements==='taken'?'selected':''}>Taken</option><option value="skipped" ${item.supplements==='skipped'?'selected':''}>Skipped</option></select></div><div class="field"><label>Stretching</label><input id="checkin-stretch" type="number" min="0" step="1" required placeholder="Minutes" value="${escapeValue(item.stretchMinutes ?? '')}"></div><div class="field"><label>Vocabulary</label><input id="checkin-vocab" type="number" min="0" step="1" required placeholder="Words" value="${escapeValue(item.vocabularyWords ?? '')}"></div><div class="field"><label>Reading</label><input id="checkin-reading" type="number" min="0" step="1" required placeholder="Minutes" value="${escapeValue(item.readingMinutes ?? '')}"></div><div class="field"><label>Coffee</label><input id="checkin-coffee" type="number" min="0" step="1" required placeholder="Shots" value="${escapeValue(item.coffeeShots ?? '')}"></div><div class="field wide"><label>Today, one thing I really do not want to do</label><input id="checkin-avoid" required placeholder="Write it honestly" value="${escapeValue(item.avoidTask)}"></div><div class="field wide"><label>One thing I am grateful for today</label><input id="checkin-gratitude" required placeholder="Name one thing" value="${escapeValue(item.gratitude)}"></div></div><button class="btn" type="button" onclick="saveDailyCheckin()">Save daily check-in</button></div></details></section>`);
   };
   window.saveDailyCheckin = () => {
     const card = document.querySelector('#daily-checkin-card');
@@ -357,8 +454,44 @@ setLifeType('gym');renderCalendar();
       if (match) shift.textContent = match[0];
     });
   };
+  const markTaskDays = () => {
+    document.querySelectorAll('.calendar .day').forEach(day => {
+      const date = day.getAttribute('onclick')?.match(/'(\d{4}-\d{2}-\d{2})'/)?.[1];
+      const records = S.tasks.filter(item => item.date === date && !item.done);
+      const gym = records.find(item => item.type === 'gym');
+      const hasQuietRecord = records.some(item => item.type === 'medication' || item.type === 'custom');
+      day.querySelector('.task-dot')?.remove();
+      day.querySelector('.calendar-indicator')?.remove();
+      if (gym) {
+        const plan = document.createElement('span');
+        plan.className = 'task-dot'; plan.textContent = gym.text; plan.title = gym.text;
+        day.append(plan);
+      }
+      if (hasQuietRecord) day.insertAdjacentHTML('beforeend', '<span class="calendar-indicator" aria-label="Additional record"></span>');
+      day.classList.toggle('has-task', Boolean(gym));
+    });
+  };
+  const prettyDate = date => new Intl.DateTimeFormat('en-NZ', {month:'long', day:'numeric', year:'numeric'}).format(new Date(`${date}T12:00:00`));
+  const compactHours = value => Number.isInteger(value) ? String(value) : value.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+  const originalRenderDay = renderDay;
+  renderDay = () => {
+    originalRenderDay();
+    const title = document.querySelector('#day-title');
+    const details = document.querySelector('#day-details');
+    if (!title || !details) return;
+    title.textContent = prettyDate(selected);
+    const shifts = shiftsOn(selected);
+    const tasks = S.tasks.filter(item => item.date === selected && !item.done);
+    if (!shifts.length && !tasks.length) return;
+    const clock = '<span class="day-plan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3.5 2"></path></svg></span>';
+    const plans = shifts.map(shift => `<div class="day-plan-row">${clock}<div class="day-plan-copy"><span class="day-plan-date">${prettyDate(selected)}</span><b>${shift.start} – ${shift.end}</b><span class="day-plan-hours">${esc(shift.role || 'Shift')} · ${compactHours(hours(shift.start, shift.end))}h</span></div></div>`).join('');
+    const medicine = '<span class="day-plan-icon medication" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8.2 6.2 9.6 9.6a3.4 3.4 0 0 1-4.8 4.8l-9.6-9.6a3.4 3.4 0 0 1 4.8-4.8Z"></path><path d="m6 13 5-5"></path></svg></span>';
+    const medications = tasks.filter(task => task.type === 'medication').map(task => `<div class="day-plan-row">${medicine}<div class="day-plan-copy"><span class="day-plan-date">${prettyDate(selected)}</span><b>${esc(task.text)}</b><span class="day-plan-hours">Medication</span></div></div>`).join('');
+    const events = tasks.filter(task => task.type !== 'medication').map(task => `<div class="day-plan-event">• ${esc(task.text)}</div>`).join('');
+    details.innerHTML = plans + medications + events;
+  };
   const originalCalendarRender = renderCalendar;
-  renderCalendar = () => { originalCalendarRender(); markSelectedDay(); showStartTimesOnly(); };
+  renderCalendar = () => { originalCalendarRender(); markSelectedDay(); showStartTimesOnly(); markTaskDays(); };
   const collapseSavedShifts = () => {
     const container = document.querySelector('#saved-shifts');
     if (!container || container.querySelector('.saved-shifts-accordion')) return;
@@ -415,12 +548,26 @@ setLifeType('gym');renderCalendar();
   };
   const originalRosterRender = renderRoster;
   renderRoster = () => { originalRosterRender(); filterSavedRows('#saved-shifts', 'No saved shifts for this month.'); collapseWeekEntry(); collapseSavedShifts(); };
+  const compactTimeEntry = () => {
+    const card = document.querySelector('#time-page > .card:first-child');
+    const notice = document.querySelector('#time-difference');
+    const breakField = document.querySelector('#unpaid-break')?.closest('.field');
+    const noteField = document.querySelector('#actual-note')?.closest('.field');
+    if (!card || !notice || !breakField || !noteField || card.querySelector('.time-compact-extra')) return;
+    const extra = document.createElement('div');
+    extra.className = 'time-compact-extra';
+    document.querySelector('#unpaid-break').placeholder = 'Minutes';
+    document.querySelector('#actual-note').placeholder = 'Optional note';
+    extra.append(breakField, noteField);
+    notice.before(extra);
+  };
   const originalTimeRender = renderTime;
-  renderTime = () => { originalTimeRender(); filterSavedRows('#actual-list', 'No saved time logs for this month.'); collapseSavedTimeLogs(); };
+  renderTime = () => { originalTimeRender(); compactTimeEntry(); filterSavedRows('#actual-list', 'No saved time logs for this month.'); collapseSavedTimeLogs(); };
   const originalTasksRender = renderTasks;
   renderTasks = () => { originalTasksRender(); collapseTaskSections(); };
   const originalChangeMonth = changeMonth;
   changeMonth = step => { originalChangeMonth(step); if (document.querySelector('#roster-page').classList.contains('on')) renderRoster(); if (document.querySelector('#time-page').classList.contains('on')) renderTime(); };
+  compactTimeEntry();
   renderCalendar();
 })();
 </script></body></html>
