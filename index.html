@@ -5,20 +5,37 @@
 /* A single cool accent gives actions and information a clear visual hierarchy. */
 :root { --accent-blue:#9DBFD4; --accent-blue-strong:#7FAAC4; --accent-ink:#223F54; }
 *, *::before, *::after { box-shadow:none !important; }
+html, body, button, input, select, textarea { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important; }
+button { font-weight:700 !important; }
 body { background:linear-gradient(135deg,#c4aa80,#d8c9ae 52%,#bbb09f) !important; }
 .card { box-shadow:none !important; }
 .metric { background:#584738 !important; }
 .notice, .quick-row, .shopping-note { background:#654f3e !important; }
-.day { background:#705a47 !important; }
-.day.has { background:#806a54 !important; }
+.calendar .day:not(.has) { background:#705A47 !important; color:var(--cream) !important; border-color:#806A54 !important; }
+.calendar .day.has { background:#F1EADA !important; color:#584738 !important; border-color:#D2C1A6 !important; }
 .btn.alt, .icon { background:#725b47 !important; }
-button:not(.danger), .month-nav button, .bottom-nav button.active { background:var(--accent-blue) !important; color:var(--accent-ink) !important; border-color:rgba(34,63,84,.15) !important; border-radius:16px !important; }
+.month-nav { display:grid !important; grid-template-columns:40px minmax(0,1fr) 40px !important; gap:12px !important; align-items:center !important; }
+.month-nav .icon { display:flex !important; align-items:center; justify-content:center; width:40px !important; min-width:40px !important; max-width:40px !important; height:40px !important; min-height:40px !important; padding:0 !important; border-radius:50% !important; font-size:22px !important; line-height:1 !important; }
+.month-nav h2 { min-width:0 !important; margin:0 !important; overflow:visible !important; text-overflow:clip !important; white-space:nowrap !important; text-align:center; font-size:20px !important; font-weight:700 !important; letter-spacing:-.02em; }
+.brand { font-weight:800 !important; letter-spacing:-.03em; }
+.title, label, .day-name b, .row-field label { font-weight:700 !important; }
+input, select, textarea { font-weight:600 !important; }
+.small, .notice, .weekday, .metric span, .life-tag, .sync-note, .empty { font-weight:400 !important; }
+.title-row .btn.alt { display:inline-flex !important; align-items:center; justify-content:center; width:auto !important; min-width:auto !important; min-height:36px !important; padding:8px 12px !important; background:#9DBFD4 !important; color:#223F54 !important; border:1px solid #7FAAC4 !important; border-radius:10px !important; font-size:13px !important; font-weight:700 !important; }
+.checkin-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:14px; }
+.checkin-grid .field { margin:0; }
+.checkin-grid .wide { grid-column:1 / -1; }
+.checkin-status { display:inline-flex; margin-left:auto; padding:5px 9px; background:#B5D1E0; color:#223F54; border:1px solid #7FAAC4; border-radius:999px; font-size:12px; font-weight:700 !important; }
+.checkin-status.done { background:#B59E7D; color:#382920; border-color:#9B8465; }
+#daily-checkin-card .btn { margin-top:16px; }
+button:not(.danger):not(.day), .month-nav button, .bottom-nav button.active { background:var(--accent-blue) !important; color:var(--accent-ink) !important; border-color:rgba(34,63,84,.15) !important; border-radius:16px !important; }
 nav { background:#F1EADA !important; backdrop-filter:none !important; border-radius:0 !important; }
-nav button:not(.danger), nav button.on { min-height:auto !important; padding:8px 0 !important; background:transparent !important; color:#82705a !important; font-size:10px !important; line-height:1.2 !important; border-color:transparent !important; border-radius:0 !important; box-shadow:none !important; }
+nav button:not(.danger):not(.day), nav button.on { min-height:auto !important; padding:8px 0 !important; background:#F1EADA !important; color:#82705a !important; font-size:10px !important; line-height:1.2 !important; border-color:transparent !important; border-radius:0 !important; box-shadow:none !important; }
 nav button.on { color:var(--mahogany) !important; }
 nav .nav-icon { width:20px !important; height:20px !important; }
 input:focus, select:focus, textarea:focus { outline:3px solid rgba(157,191,212,.55) !important; outline-offset:2px; border-color:var(--accent-blue-strong) !important; }
-#apple-calendar-export-button { display:inline-flex !important; width:auto !important; margin:22px 0 0; min-height:38px; padding:8px 12px; background:#B5D1E0 !important; color:var(--accent-ink) !important; font-size:14px !important; font-weight:700; letter-spacing:0; border:1px solid rgba(34,63,84,.14) !important; border-radius:12px !important; box-shadow:none !important; }
+#apple-calendar-export-button { display:inline-flex !important; align-items:center; justify-content:center; width:36px !important; min-width:36px !important; max-width:36px !important; height:36px !important; min-height:36px !important; margin:22px 0 0; padding:0 !important; background:#9DBFD4 !important; color:var(--accent-ink) !important; border:1px solid #7FAAC4 !important; border-radius:10px !important; box-shadow:none !important; }
+#apple-calendar-export-button svg { width:18px; height:18px; fill:currentColor; }
 .summary > :first-child, .metric:first-child { border-color:rgba(157,191,212,.58) !important; }
 /* Static iPhone 14 Pro layout guard: keep native controls inside their cards. */
 html, body { max-width:100%; overflow-x:hidden; }
@@ -42,6 +59,7 @@ html, body { max-width:100%; overflow-x:hidden; }
   .life-item .check, .shopping-note .check { display:block !important; width:20px !important; min-width:20px !important; max-width:20px !important; height:20px !important; min-height:20px !important; padding:0 !important; margin:0 !important; }
   .life-item .life-copy { min-width:0 !important; overflow-wrap:anywhere; }
   .life-item .btn.mini, .shopping-note .btn.mini { display:inline-flex !important; align-items:center; justify-content:center; width:auto !important; min-width:76px !important; max-width:none !important; min-height:38px !important; padding:8px 11px !important; font-size:13px !important; white-space:nowrap; }
+  .checkin-grid { grid-template-columns:1fr !important; gap:12px !important; }
   .bottom-nav { padding-left:max(12px, env(safe-area-inset-left)) !important; padding-right:max(12px, env(safe-area-inset-right)) !important; }
 }
 </style></head><body><div id="lock"><div class="lock-card"><h1>Hours Tracker</h1><p>Enter your personal access code to sync your roster and time logs.</p><input id="unlock-code" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Access code"><button class="btn" onclick="unlock()">Unlock</button><div class="sync-note">This device stays unlocked until you clear browser data.</div></div></div><svg width="0" height="0" style="position:absolute"><defs><filter id="sketch"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.2"/></filter></defs><symbol id="cal-icon" viewBox="0 0 24 24"><g filter="url(#sketch)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4m8-4v4M4 10h16"/></g></symbol><symbol id="clock-icon" viewBox="0 0 24 24"><g filter="url(#sketch)" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></g></symbol><symbol id="coin-icon" viewBox="0 0 24 24"><g filter="url(#sketch)" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v10m2-7c-1-.8-4-.6-4 1 0 2 5 1 5 4 0 1.6-3 1.9-4 1"/></g></symbol><symbol id="chart-icon" viewBox="0 0 24 24"><g filter="url(#sketch)" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20h16M6 20v-6m6 6V8m6 12v-9"/></g></symbol></svg><main class="app"><div class="brand">Ruby Ouyang</div><div id="toast"></div>
@@ -214,10 +232,33 @@ setLifeType('gym');renderCalendar();
   const mount = () => {
     const page = document.querySelector('#calendar-page');
     if (!page || document.querySelector('#apple-calendar-export-button')) return;
-    const button = document.createElement('button'); button.id = 'apple-calendar-export-button'; button.type = 'button'; button.textContent = 'Export to Apple Calendar'; button.addEventListener('click', downloadCalendar);
+    const button = document.createElement('button'); button.id = 'apple-calendar-export-button'; button.type = 'button'; button.setAttribute('aria-label', 'Export to Apple Calendar'); button.title = 'Export to Apple Calendar'; button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1Zm13 8H4v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9Z"/></svg>'; button.addEventListener('click', downloadCalendar);
     page.appendChild(button);
   };
   document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', mount) : mount();
+})();
+</script><script id="daily-checkin">
+(() => {
+  const localDate = () => { const d = new Date(); const p = n => String(n).padStart(2, '0'); return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`; };
+  const escapeValue = value => String(value ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const current = date => (S.checkins || []).find(item => item.date === date) || {};
+  const renderCheckin = () => {
+    const page = document.querySelector('#tasks-page');
+    if (!page || document.querySelector('#daily-checkin-card')) return;
+    S.checkins ||= [];
+    const date = localDate(), item = current(date), done = Boolean(item.completedAt);
+    page.insertAdjacentHTML('afterbegin', `<section class="card" id="daily-checkin-card"><div class="title-row"><span class="title">Daily check-in · ${date}</span><span class="checkin-status ${done ? 'done' : ''}">${done ? 'Completed' : 'Required today'}</span></div><div class="notice">A short daily reset: mood, sleep, habits, and one honest sentence.</div><div class="checkin-grid"><div class="field"><label>Mood</label><select id="checkin-mood" required><option value="">Choose</option>${['Calm','Happy','Tired','Anxious','Low'].map(x=>`<option ${item.mood===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label>Sleep</label><input id="checkin-sleep" type="number" min="0" max="16" step="0.5" required placeholder="Hours" value="${escapeValue(item.sleepHours)}"></div><div class="field"><label>Sleep quality</label><select id="checkin-quality" required><option value="">Choose 1–5</option>${[1,2,3,4,5].map(x=>`<option value="${x}" ${String(item.sleepQuality)===String(x)?'selected':''}>${x} / 5</option>`).join('')}</select></div><div class="field"><label>Supplements</label><select id="checkin-supplements" required><option value="">Choose</option><option value="taken" ${item.supplements==='taken'?'selected':''}>Taken</option><option value="skipped" ${item.supplements==='skipped'?'selected':''}>Skipped</option></select></div><div class="field"><label>Stretching (min)</label><input id="checkin-stretch" type="number" min="0" step="1" required value="${escapeValue(item.stretchMinutes ?? '')}"></div><div class="field"><label>Vocabulary (words)</label><input id="checkin-vocab" type="number" min="0" step="1" required value="${escapeValue(item.vocabularyWords ?? '')}"></div><div class="field"><label>Reading (min)</label><input id="checkin-reading" type="number" min="0" step="1" required value="${escapeValue(item.readingMinutes ?? '')}"></div><div class="field"><label>Coffee (shots)</label><input id="checkin-coffee" type="number" min="0" step="1" required value="${escapeValue(item.coffeeShots ?? '')}"></div><div class="field wide"><label>Today, one thing I really do not want to do</label><input id="checkin-avoid" required placeholder="Write it honestly" value="${escapeValue(item.avoidTask)}"></div><div class="field wide"><label>One thing I am grateful for today</label><input id="checkin-gratitude" required placeholder="Name one thing" value="${escapeValue(item.gratitude)}"></div></div><button class="btn" type="button" onclick="saveDailyCheckin()">Save daily check-in</button></section>`);
+  };
+  window.saveDailyCheckin = () => {
+    const card = document.querySelector('#daily-checkin-card');
+    const fields = [...card.querySelectorAll('[required]')];
+    if (!fields.every(field => String(field.value).trim() !== '')) { toast('Complete today’s check-in first.'); return; }
+    const record = { date:localDate(), mood:document.querySelector('#checkin-mood').value, sleepHours:Number(document.querySelector('#checkin-sleep').value), sleepQuality:Number(document.querySelector('#checkin-quality').value), supplements:document.querySelector('#checkin-supplements').value, stretchMinutes:Number(document.querySelector('#checkin-stretch').value), vocabularyWords:Number(document.querySelector('#checkin-vocab').value), readingMinutes:Number(document.querySelector('#checkin-reading').value), coffeeShots:Number(document.querySelector('#checkin-coffee').value), avoidTask:document.querySelector('#checkin-avoid').value.trim(), gratitude:document.querySelector('#checkin-gratitude').value.trim(), completedAt:new Date().toISOString() };
+    S.checkins ||= []; S.checkins = S.checkins.filter(item => item.date !== record.date); S.checkins.push(record); save(); card.remove(); renderCheckin(); toast('Daily check-in saved');
+  };
+  const originalRenderTasks = renderTasks;
+  renderTasks = () => { originalRenderTasks(); renderCheckin(); };
+  renderCheckin();
 })();
 </script></body></html>
 
